@@ -4,25 +4,28 @@
 // #include <math.h>
 // #include <stdlib.h>
 
-int main() 
-{
-    int n;
-    scanf("%d", &n);
-    int k=n, dex=-1, dey=-1, dem=0;
-    
-    for (int idx=0; idx<2*n-1; idx++) {
-        if (idx <= n - 1) dex++;
-        for (int jdx=0; jdx<2*n-1; jdx++) {
-            if (jdx <= n - 1) dey++;
-            dem = (dex < dey) ? dex : dey;
-            printf("%d ", k - dem);
-            if (jdx >= n - 1) dey--;
-        }
-        if (idx >= n - 1) dex--;
-        printf("\n");
+int main() {
+  int n;
+  scanf("%d", &n);
+  int k = n, dex = -1, dey = -1, dem = 0;
+
+  for (int idx = 0; idx < 2 * n - 1; idx++) {
+    if (idx <= n - 1)
+      dex++;
+    for (int jdx = 0; jdx < 2 * n - 1; jdx++) {
+      if (jdx <= n - 1)
+        dey++;
+      dem = (dex < dey) ? dex : dey;
+      printf("%d ", k - dem);
+      if (jdx >= n - 1)
+        dey--;
     }
-    
-    return 0;
+    if (idx >= n - 1)
+      dex--;
+    printf("\n");
+  }
+
+  return 0;
 }
 
 /*
