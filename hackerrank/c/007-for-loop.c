@@ -1,9 +1,7 @@
 #include <stdio.h>
-// #include <string.h>
-// #include <math.h>
-// #include <stdlib.h>
+#include <stdlib.h>
 
-char *repr(int var) {
+char* repr(int var) {
   switch (var) {
   case 1:
     return "one";
@@ -34,11 +32,11 @@ char *repr(int var) {
   return "odd";
 }
 
-int main() {
+int main(void) {
   int a, b;
   scanf("%d\n%d", &a, &b);
   for (int idx = a; idx <= b; idx++) {
     printf("%s\n", repr(idx));
   }
-  return 0;
+  return EXIT_SUCCESS;
 }

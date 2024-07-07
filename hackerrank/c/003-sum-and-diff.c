@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main() {
+int main(void) {
   // %d (integer), %c (character), %s (string), %f (float)s
   int x, y;
   scanf(" %d %d", &x, &y);
@@ -8,5 +9,5 @@ int main() {
   float a, b;
   scanf(" %f %f", &a, &b);
   printf("%.1f %.1f", a + b, a - b);
-  return 0;
+  return EXIT_SUCCESS;
 }

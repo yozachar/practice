@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
+int main(void) {
   int n;
   scanf("%d", &n);
 
-  int *arr = (int *)malloc(n * sizeof(int));
+  int* arr = (int*)malloc(n * sizeof(int));
   for (int i = 0; i < n; i++) {
     scanf("%d", &arr[i]);
   }
@@ -15,8 +15,8 @@ int main() {
     sum += arr[i];
   }
   printf("%d", sum);
-  
+
   free(arr);
 
-  return 0;
+  return EXIT_SUCCESS;
 }

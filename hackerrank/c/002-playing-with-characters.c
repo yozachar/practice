@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main() {
+int main(void) {
   char ch;
   char sr[50];
   char st[100];
@@ -14,5 +15,5 @@ int main() {
   // %*c reads and discards \n character
 
   printf("%c\n%s\n%s", ch, sr, st);
-  return 0;
+  return EXIT_SUCCESS;
 }

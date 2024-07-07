@@ -1,18 +1,13 @@
-// #include <assert.h>
-// #include <limits.h>
-// #include <math.h>
-// #include <stddef.h>
-// #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-char *readline();
+char* readline();
 
-int main() {
-  char *n_endptr;
-  char *n_str = readline();
+int main(void) {
+  char* n_endptr;
+  char* n_str = readline();
   int n = strtol(n_str, &n_endptr, 10);
 
   if (n_endptr == n_str || *n_endptr != '\0') {
@@ -42,17 +37,17 @@ int main() {
     printf("Greater than 9");
   }
 
-  return 0;
+  return EXIT_SUCCESS;
 }
 
-char *readline() {
+char* readline() {
   size_t alloc_length = 1024;
   size_t data_length = 0;
-  char *data = malloc(alloc_length);
+  char* data = malloc(alloc_length);
 
   while (true) {
-    char *cursor = data + data_length;
-    char *line = fgets(cursor, alloc_length - data_length, stdin);
+    char* cursor = data + data_length;
+    char* line = fgets(cursor, alloc_length - data_length, stdin);
 
     if (!line) {
       break;

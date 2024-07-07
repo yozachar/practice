@@ -1,10 +1,7 @@
 #include <stdio.h>
-// #include <stdbool.h>
-// #include <string.h>
-// #include <math.h>
-// #include <stdlib.h>
+#include <stdlib.h>
 
-int main() {
+int main(void) {
   int n;
   scanf("%d", &n);
   int k = n, dex = -1, dey = -1, dem = 0;
@@ -25,7 +22,7 @@ int main() {
     printf("\n");
   }
 
-  return 0;
+  return EXIT_SUCCESS;
 }
 
 /*

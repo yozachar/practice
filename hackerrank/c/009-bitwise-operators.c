@@ -1,7 +1,5 @@
 #include <stdio.h>
-// #include <string.h>
-// #include <math.h>
-// #include <stdlib.h>
+#include <stdlib.h>
 
 void calculate_the_maximum(int n, int k) {
   int max_a = 0, max_o = 0, max_x = 0;
@@ -22,11 +20,11 @@ void calculate_the_maximum(int n, int k) {
   printf("%d\n%d\n%d", max_a, max_o, max_x);
 }
 
-int main() {
+int main(void) {
   int n, k;
 
   scanf("%d %d", &n, &k);
   calculate_the_maximum(n, k);
 
-  return 0;
+  return EXIT_SUCCESS;
 }
